@@ -1,15 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Home from "./Home";
 
-function App() {
-  
+const App = () => {
+  const handleButtonClick = (name: string) => {
+    console.log("Button clicked with name:", name);
+  };
   return (
-    <>
-     
-    </>
-  )
-}
+    <div>
+      <Home onButtonClick={handleButtonClick} />
+    </div>
+  );
+};
 
-export default App
+export default App;
