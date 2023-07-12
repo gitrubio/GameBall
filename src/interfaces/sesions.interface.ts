@@ -3,6 +3,7 @@
 export type StatusSession = 'pending' | 'playing' | 'finished'
 
 export interface ISession {
+    id: string
     dateStart: Date;
     dateEnd: Date;
     players: IPlayer[]
