@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Canvas } from "react-three-fiber";
 import { OrbitControls, Sphere } from "@react-three/drei";
+import { Button } from "antd";
 
 const Scene: React.FC = () => {
   const sphereRef = useRef<any>();
@@ -83,7 +84,7 @@ const Scene: React.FC = () => {
         </Sphere>
         <OrbitControls />
       </Canvas>
-      <button onClick={requestOrientationPermission}>PErmisos</button>
+      <Button onClick={requestOrientationPermission}>Permisos</Button>
     </>
   );
 };

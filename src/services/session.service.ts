@@ -2,7 +2,7 @@ import { query, orderBy, addDoc, getDocs, deleteDoc, doc, updateDoc, onSnapshot,
 import { sessionCollectionRef } from "../firebase/providers";
 import { ISession } from "../interfaces/sesions.interface";
 
-export class MenuFirebaseService {
+export class SessionService {
     constructor(
         private sessionCollection = sessionCollectionRef,
     ) { }
@@ -80,8 +80,8 @@ export class MenuFirebaseService {
         });
     }
 
-    listeningModule(moduleId: string, onSet: (modules: ISession) => void) {
-        const moduleRef = doc(this.sessionCollection, moduleId);
+    listeningSession(sessionId: string, onSet: (session: ISession) => void) {
+        const moduleRef = doc(this.sessionCollection, sessionId);
         return onSnapshot(moduleRef, (doc) => {
             const data = doc.data()
             onSet({ id: doc.id, ...data } as ISession)
@@ -91,4 +91,4 @@ export class MenuFirebaseService {
 
 }
 
-export const menuFirebaseService = new MenuFirebaseService()
+export const sessionService = new SessionService()
