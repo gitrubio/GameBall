@@ -1,13 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
-import { menusSlice } from './menus/menuSlice'
+import { userSessionSlice } from './menus/userSessionSlice'
 import { statusConectionSlice } from './status-conection/statusConectionSlice';
+import { sessionSlice } from './menus/sessionSlice';
 
 
 export const store = configureStore({
     reducer: {
-        menu: menusSlice.reducer,
+        userSession: userSessionSlice.reducer,
         statusConection: statusConectionSlice.reducer,
+        session: sessionSlice.reducer
     },
 })
 
