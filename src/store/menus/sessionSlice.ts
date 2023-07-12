@@ -23,11 +23,20 @@ export const sessionSlice = createSlice({
         startLoading: (state, /* action */) => {
             console.log('algo')
         },
+        setSession: (state, { payload }: { payload: ISession }) => {
+            state.id = payload.id
+            state.configApparence = payload.configApparence
+            state.dateEnd = payload.dateEnd
+            state.dateStart = payload.dateStart
+            state.limitPlayers = payload.limitPlayers
+            state.players = payload.players
+            state.statusSession = payload.statusSession
+        }
     },
 
 });
 
 
-export const { startLoading } = sessionSlice.actions;
+export const { startLoading, setSession } = sessionSlice.actions;
 
 export const selectedSession = (state: RootState) => state.session
