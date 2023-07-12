@@ -1,6 +1,6 @@
 import { Action, ThunkAction } from "@reduxjs/toolkit";
 import { AppDispatch, RootState, useAppSelector } from "../store";
-import { startLoading, setModules, startMutation, stopMutation } from "./menuSlice";
+import { startLoading, setModules, startMutation, stopMutation } from "./userSessionSlice";
 import { IMenu } from "../../interfaces/modules-interface";
 import { DispatchMessageService } from "../../components/message-response/DispatchMessageService";
 import { closeDrawer, closeEditionMode } from "../form-modules/formModulesSlices";
