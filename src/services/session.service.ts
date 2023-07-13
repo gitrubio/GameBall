@@ -1,4 +1,4 @@
-import { query, orderBy, addDoc, getDocs, deleteDoc, doc, updateDoc, onSnapshot, getDoc, where, } from "firebase/firestore";
+import { query, orderBy, addDoc, getDocs, deleteDoc, doc, updateDoc, onSnapshot, getDoc, } from "firebase/firestore";
 import { sessionCollectionRef } from "../firebase/providers";
 import { ISession } from "../interfaces/sesions.interface";
 

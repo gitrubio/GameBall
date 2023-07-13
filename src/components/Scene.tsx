@@ -12,29 +12,14 @@ const Scene: React.FC = () => {
         const x = (gamma || 0) / 90; // Normalizar el valor gamma entre -1 y 1
         const y = (beta || 0) / 90; // Normalizar el valor beta entre -1 y 1
 
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
         sphereRef.current.position.x = x * 5; // Ajustar la velocidad de movimiento
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
         sphereRef.current.position.y = y * 5; // Ajustar la velocidad de movimiento
       }
     };
 
-    const requestOrientationPermission = async () => {
-      try {
-        if (typeof DeviceMotionEvent !== 'undefined' && typeof DeviceMotionEvent.requestPermission === 'function') {
-          const permission = await DeviceMotionEvent.requestPermission();
-          alert(permission)
-          if (permission === 'granted') {
-            window.addEventListener('deviceorientation', handleDeviceOrientation);
-          }
-        } else {
-          
-          window.addEventListener('deviceorientation', handleDeviceOrientation);
-        }
-      } catch (error) {
-        console.error('Error al solicitar permisos para acceder a la orientación del dispositivo:', error);
-      }
-    };
 
-    requestOrientationPermission();
 
     return () => {
       window.removeEventListener('deviceorientation', handleDeviceOrientation);

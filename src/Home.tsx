@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Col, Input, Button, Typography, Layout } from "antd";
+import { Input, Button, Typography, Layout } from "antd";
 
 interface HomeProps {
   onButtonClick: (name: string) => void;

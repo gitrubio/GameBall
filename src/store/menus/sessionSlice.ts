@@ -20,7 +20,7 @@ export const sessionSlice = createSlice({
     name: 'userSession',
     initialState,
     reducers: {
-        startLoading: (state, /* action */) => {
+        startLoading: ( /* action */) => {
             console.log('algo')
         },
         setSession: (state, { payload }: { payload: ISession }) => {

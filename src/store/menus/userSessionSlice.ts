@@ -15,7 +15,7 @@ export const userSessionSlice = createSlice({
     name: 'userSession',
     initialState,
     reducers: {
-        startLoading: (state, /* action */) => {
+        startLoading: ( /* action */) => {
             console.log('algo')
         },
     },
