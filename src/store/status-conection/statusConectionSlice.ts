@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+/* import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { TStatusConection } from '../../interfaces/status-conection.interface';
 
@@ -23,3 +23,4 @@ export const statusConectionSlice = createSlice({
 export const { setStatusConection } = statusConectionSlice.actions;
 
 export const selectMenus = (state: RootState) => state.menu;
+ */

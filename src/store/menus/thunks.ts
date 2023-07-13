@@ -1,4 +1,4 @@
-import { Action, ThunkAction } from "@reduxjs/toolkit";
+/* import { Action, ThunkAction } from "@reduxjs/toolkit";
 import { AppDispatch, RootState, useAppSelector } from "../store";
 import { startLoading, setModules, startMutation, stopMutation } from "./userSessionSlice";
 import { IMenu } from "../../interfaces/modules-interface";
@@ -109,3 +109,4 @@ export const activeModule = (menuId: string): ThunkResult<void> => {
     };
 };
 
+ */
