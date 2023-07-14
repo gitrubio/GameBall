@@ -5,6 +5,7 @@ import { OrbitControls, Sphere } from '@react-three/drei';
 const Scene: React.FC = () => {
   const sphereRef = useRef<any>();
 
+
   useEffect(() => {
     const handleDeviceOrientation = (event: DeviceOrientationEvent) => {
       if (sphereRef.current) {
@@ -19,8 +20,20 @@ const Scene: React.FC = () => {
       }
     };
 
-
-
+    const requeriment = () => {
+      if (typeof DeviceOrientationEvent !== "function") {
+         alert("DeviceOrientationEvent not detected");
+      }
+      if (typeof DeviceOrientationEvent.requestPermission !== "function") {
+        alert("DeviceOrientationEvent.requestPermission not detected");
+      }
+      DeviceOrientationEvent.requestPermission().then(function (result : any) {
+      
+        window.addEventListener("deviceorientation", handleDeviceOrientation, true);
+       alert(result);
+      });
+    }
+    requeriment()
     return () => {
       window.removeEventListener('deviceorientation', handleDeviceOrientation);
     };
